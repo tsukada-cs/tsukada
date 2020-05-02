@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- BootstrapのCSS読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- jQuery読み込み --> 
+    <script src="bootstrap/js/bootstrap.min.js"></script> <!-- BootstrapのJS読み込み -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"> <!-- Font Awesome読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Taiga Tsukada</title>
+    <meta name="keyword" content="塚田大河,北海道大学,北大,ひまわり８号,台風,塚田,Taiga Tsukada,Hokkaido University,Himawari-8,Typhoon,Tsukada">
+    <meta name="description" content="北海道大学 塚田 大河 のホームページ">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="name">TAIGA <span class="font-weight-bold">TSUKADA</span></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active ml-2"><a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item ml-2"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item ml-2"><a class="nav-link" href="research.html">Research</a></li>
+                <li class="nav-item ml-2"><a class="nav-link" href="publications.html">Publication</a></li>
+                <li class="nav-item ml-2"><a class="nav-link" href="links.html">Link</a></li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown bg-light">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="index.html">
+                        <img src="images/flags/Japan.png" class="flag-image-japan">
+                        <span class="ml-2">日本語</span>
+                    </a>
+                    <a class="dropdown-item" href="index_en.html">
+                        <img src="images/flags/England.png" class="flag-image">
+                        <span class="ml-2">English</span>
+                    </a>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!--Carousel Wrapper-->
+        <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-2" data-slide-to="1"></li>
+            <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">  
+                <div class="carousel-item carousel-image-1 active"></div>
+                <div class="carousel-item carousel-image-2"></div>
+                <div class="carousel-item carousel-image-3"></div>
+            </div>
+            <!-- 大画面に対して表示 -->
+            <div class="carousel-caption d-none d-sm-block">
+                <h2 class="h2-responsive">塚田 大河</h2>
+                <span>北海道大学 大学院環境科学院
+                <br>地球圏科学専攻 大気海洋物理学・気候力学コース
+                <br>博士課程１年</span>
+            </div>
+            <!-- 小画面に対して表示 -->
+            <div class="carousel-caption d-sm-none">
+                <h3 class="h3-responsive">塚田 大河</h3>
+                <span>北海道大学 環境科学院
+                <br> 地球圏科学専攻
+                <br> 博士課程１年</span>
+            </div>
+            <div class="carousel-caption photo-credit"> <span> ©️ Photo by Reo Tsukada </span></div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+            <!--/.Controls-->
+        </div>
+        <!--/.Carousel Wrapper-->
+        <!-- container -->
+        <div class="container mt-1">
+            <div class="row mt-5">
+                <div class="col-lg-7">
+                    <img src="images/profile/profile1.png" class="profile-image">
+                </div>
+                <div class="col-lg-5 contact">
+                    <h3 class="mt-4"> 連絡先 </h3>
+                    <!-- <div class="mail"><li><span>tsukada🌪ees.hokudai.ac.jp</span></li></div> -->
+                    <i class="fas fa-home"></i><span>〒060-0810 北海道札幌市北区北10条西5丁目<br>北海道大学 大学院環境科学院 B棟306号室</span>
+
+                    <!-- <div class="mt-2">
+                        <i class="far fa-envelope fa-lg"></i>
+                        <span>tsukada🌪ees.hokudai.ac.jp</span>
+                    </div>
+                    <p class="mt-2">
+                        <i class="fas fa-home fa-lg"></i>
+                        <span>〒060-0810 北海道札幌市北区北10条西5丁目<br>北海道大学 大学院環境科学院 B棟306号室</span>
+                    </p> -->
+                    <h3 class="mt-4">所属研究室</h3>
+                    <p class="mt-2">
+                        <a href="https://www.hokudai.ac.jp/">北海道大学</a>
+                        <a href="https://www.ees.hokudai.ac.jp/?easiestml_lang=ja">大学院環境科学院</a>
+                        <a href="https://www.ees.hokudai.ac.jp/division/earth/">地球圏科学専攻</a>
+                        <br>
+                        <a href="http://wwwoa.ees.hokudai.ac.jp/">大気海洋物理学・気候力学コース</a>
+                        <a href="http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.htm">堀之内研究室</a>
+                        <br>
+                        指導教員：<a href="http://wwwoa.ees.hokudai.ac.jp/people/horinout/">堀之内 武</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+        <div class="icon bg-dark mt-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 col-sm-6">
+                        <a href="me.html">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-user fa-3x"></i>
+                                    <h5 class="card-title">About</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="research.html">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-cloud-sun-rain fa-3x"></i>
+                                    <h5 class="card-title">Research</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <a href="activity.html">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-comment fa-3x"></i>
+                                    <h5 class="card-title">Activity</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- <div class="col-md-4 col-sm-6">
+                        <a href="presentations.html">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="far fa-comment fa-3x"></i>
+                                    <h5 class="card-title">Presentations</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="py-3 text-center">© 2020 – Taiga Tsukada, Graduate School of Environmental Science, Hokkaido University, N10W5 Sapporo, Hokkaido, 060-0810, Japan.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
