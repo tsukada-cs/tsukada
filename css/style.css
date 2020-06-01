@@ -1,23 +1,25 @@
 html {
-  background-color: #f8f9fa;
+  background-color: #fff;
+  position: relative;
+  min-height: 100%;
 }
+
 body, input, select, textarea {
   color: #767e84;
-  font-family: 'SourceHanSansJP',　"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meylio, sans-serif;
+  font-family: "SourceHanSansJP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 11pt;
   font-weight: 300;
   line-height: 1.75em;
-  margin-bottom: 60px;
 }
+
 body {
   padding-top: 50px;
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 80px;
 }
-div {
-  display: block;
-}
+
 p {
   display: block;
   margin-block-start: 1em;
@@ -27,7 +29,7 @@ p {
 }
 
 a {
-  color: #629DD1;
+  color: rgb(0, 121, 226);
   text-decoration: none;
   transition: color .2s;
 }
@@ -37,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.7em;
   line-height: 2em;
 }
 
@@ -49,6 +51,14 @@ h3 {
 h4 {
   font-size: 1.25em;
   line-height: 2em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+.title {
+  height: 20em;
 }
 
 .dropdown-item img {
@@ -112,6 +122,8 @@ h4 {
 .photo-credit {
   top: auto;
   bottom: 0px;
+  color: #f8f9fa;
+  font-size: 0.8em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -167,35 +179,22 @@ h4 {
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: .16em;
-  transition: 0.2s ease-in-out;
-}
-
-.links {
-  background: white;
-  color: #555f66;
-  text-decoration: none;
+  transition: 0.4s ease-in-out;
 }
 
 .links .card {
   padding: 1rem;
   margin: 0.5rem;
   background: white;
-  transition: 0.2s ease-in-out;
+  transition: 0.4s ease-in-out;
   border-radius: 0.5em;
   border: thin solid #999fa3;
 }
 
 .links .card:hover {
-  background: #f6faff;
+  background: #f3fff6;
   text-decoration: none;
-  border: thin solid #93bee5;
-}
-
-.links .card:active {
-  background: #fcfdff;
-  color: #7598b7;
-  text-decoration: none;
-  border: thin solid #7598b7;
+  border: thin solid #aae6a8;
 }
 
 .links a {
@@ -204,11 +203,23 @@ h4 {
 
 .links a:hover {
   text-decoration: none;
-  color: #93bee5;
+  color: #23651C;
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f8f9fa;
   color: #888;
+}
+
+.history p {
+  margin: 0;
+}
+
+.datetime {
+  padding-right: 1em;
 }
