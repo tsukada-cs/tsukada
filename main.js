@@ -44,4 +44,5 @@ function footer() {
         </div>
     </footer>
     `
+    document.write(html)
 }
