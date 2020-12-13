@@ -34,3 +34,14 @@ function header() {
     `
     document.write(html)
 }
+
+function footer() {
+    var html = 
+    `
+    <footer class="footer bg-light d-flex align-items-center">
+        <div class="container">
+            <p class="text-center">© 2020 – Taiga Tsukada. Graduate School of Environmental Science, Hokkaido University. / Photo by Reo Tsukada.</p>
+        </div>
+    </footer>
+    `
+}
