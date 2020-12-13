@@ -24,7 +24,7 @@ function header(pageName, lang) {
     `
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-            <a href="index.html" class="name" style="text-decoration: none;">TAIGA <span class="font-weight-bold">TSUKADA</span></a>
+            <a href="${urlDict[lang]['Home']}" class="name" style="text-decoration: none;">TAIGA <span class="font-weight-bold">TSUKADA</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
