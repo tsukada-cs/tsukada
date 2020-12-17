@@ -15,6 +15,37 @@
 <body>
     <script>header("About", "en")</script>
     <main>
+        <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                <li data-target="#carousel-example-2" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">  
+                <div class="carousel-item carousel-image-4 active"></div>
+                <div class="carousel-item carousel-image-5"></div>
+                <div class="carousel-item carousel-image-6"></div>
+            </div>
+            <!-- 大画面に対して表示 -->
+            <div class="carousel-caption d-none d-sm-block">
+                <h2 class="h2-responsive pt-5">About</h2>
+            </div>
+            <!-- 小画面に対して表示 -->
+            <div class="carousel-caption d-sm-none">
+                <h3 class="h3-responsive pt-5">About</h3>
+            </div>
+            <!-- Photo credit -->
+            <span class="carousel-caption photo-credit"> ©️ Photo by Reo Tsukada </span>
+
+            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
         <div class="container">
             <div class="row py-5">
                 <div class="col-lg-9">

@@ -113,6 +113,61 @@ h5 {
   background-position: center center;
 }
 
+.carousel-image-4 {
+  background-image: url("../images/covers/cover4.png");
+  background-size: cover;
+  background-position: center center; /* 画像中のどこを中心とするか */
+  position: relative;
+}
+
+.carousel-image-5 {
+  background-image: url("../images/covers/cover5.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-6 {
+  background-image: url("../images/covers/cover6.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-7 {
+  background-image: url("../images/covers/cover7.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-8 {
+  background-image: url("../images/covers/cover8.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-9 {
+  background-image: url("../images/covers/cover9.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-10 {
+  background-image: url("../images/covers/cover10.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-11 {
+  background-image: url("../images/covers/cover11.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-image-12 {
+  background-image: url("../images/covers/cover12.png");
+  background-size: cover;
+  background-position: center center;
+}
+
 .carousel-caption {
   position: absolute;
   top: 50%;
