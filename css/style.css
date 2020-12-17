@@ -95,75 +95,75 @@ h5 {
   }
 
 .carousel-image-1 {
-  background-image: url("../images/covers/cover1.JPG");
+  background-image: url("../images/covers/cover1.jpg");
   background-size: cover;
   background-position: center center; /* 画像中のどこを中心とするか */
   position: relative;
 }
 
 .carousel-image-2 {
-  background-image: url("../images/covers/cover2.JPG");
+  background-image: url("../images/covers/cover2.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-3 {
-  background-image: url("../images/covers/cover3.JPG");
+  background-image: url("../images/covers/cover3.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-4 {
-  background-image: url("../images/covers/cover4.png");
+  background-image: url("../images/covers/cover4.jpg");
   background-size: cover;
-  background-position: center center; /* 画像中のどこを中心とするか */
+  background-position: center center;
   position: relative;
 }
 
 .carousel-image-5 {
-  background-image: url("../images/covers/cover5.png");
+  background-image: url("../images/covers/cover5.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-6 {
-  background-image: url("../images/covers/cover6.png");
+  background-image: url("../images/covers/cover6.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-7 {
-  background-image: url("../images/covers/cover7.png");
+  background-image: url("../images/covers/cover7.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-8 {
-  background-image: url("../images/covers/cover8.png");
+  background-image: url("../images/covers/cover8.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-9 {
-  background-image: url("../images/covers/cover9.png");
+  background-image: url("../images/covers/cover9.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-10 {
-  background-image: url("../images/covers/cover10.png");
+  background-image: url("../images/covers/cover10.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-11 {
-  background-image: url("../images/covers/cover11.png");
+  background-image: url("../images/covers/cover11.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-12 {
-  background-image: url("../images/covers/cover12.png");
+  background-image: url("../images/covers/cover12.jpg");
   background-size: cover;
   background-position: center center;
 }
