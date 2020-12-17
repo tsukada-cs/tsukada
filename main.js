@@ -68,3 +68,18 @@ function footer() {
     `
     document.write(html)
 }
+
+function preload() {
+    $('<img src="images/covers/cover1.JPG".png">');
+    $('<img src="images/covers/cover2.JPG".png">');
+    $('<img src="images/covers/cover3.JPG".png">');
+    $('<img src="images/covers/cover4.jpg".png">');
+    $('<img src="images/covers/cover5.jpg".png">');
+    $('<img src="images/covers/cover6.jpg".png">');
+    $('<img src="images/covers/cover7.jpg".png">');
+    $('<img src="images/covers/cover8.jpg".png">');
+    $('<img src="images/covers/cover9.jpg".png">');
+    $('<img src="images/covers/cover10.jpg".png">');
+    $('<img src="images/covers/cover11.jpg".png">');
+    $('<img src="images/covers/cover12.jpg".png">');
+}
