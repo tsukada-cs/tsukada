@@ -95,20 +95,20 @@ h5 {
   }
 
 .carousel-image-1 {
-  background-image: url("../images/covers/cover1.jpg");
+  background-image: url("../images/covers/cover1.JPG");
   background-size: cover;
   background-position: center center; /* 画像中のどこを中心とするか */
   position: relative;
 }
 
 .carousel-image-2 {
-  background-image: url("../images/covers/cover2.jpg");
+  background-image: url("../images/covers/cover2.JPG");
   background-size: cover;
   background-position: center center;
 }
 
 .carousel-image-3 {
-  background-image: url("../images/covers/cover3.jpg");
+  background-image: url("../images/covers/cover3.JPG");
   background-size: cover;
   background-position: center center;
 }
