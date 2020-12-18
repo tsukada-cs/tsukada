@@ -1,10 +1,11 @@
 html {
-  background-color: #fff;
+  background-color: rgb(248, 249, 250);
   position: relative;
   min-height: 100%;
 }
 
 body, input, select, textarea {
+  background-color: #fff;
   color: #767e84;
   font-family: "SourceHanSansJP", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
   font-size: 11pt;
