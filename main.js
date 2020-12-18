@@ -6,14 +6,16 @@ urlDict = {
             "About": domein + "about.html",
             "Research": domein + "research.html",
             "Publications": domein + "publications.html",
+            "404": domein + "404.html"
         },
     "en":
-    {
-        "Home": domein + "index_en.html",
-        "About": domein + "about_en.html",
-        "Research": domein + "research_en.html",
-        "Publications": domein + "publications_en.html",
-    }
+        {
+            "Home": domein + "index_en.html",
+            "About": domein + "about_en.html",
+            "Research": domein + "research_en.html",
+            "Publications": domein + "publications_en.html",
+            "404": domein + "404.html"
+        }
 }
 
 function header(pageName, lang) {
