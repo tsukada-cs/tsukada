@@ -58,26 +58,29 @@ function header(pageName, lang) {
 }
 
 function footer(lang) {
-    urlDict = {
-        "jp": {
-            "lab": "http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.htm",
-        },
-        "en": {
-            "lab": "http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.en.htm",
-        }
-    }
+    // urlDict = {
+    //     "jp": {
+    //         "lab": "http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.htm",
+    //     },
+    //     "en": {
+    //         "lab": "http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.en.htm",
+    //     }
+    // }
     var html = 
     `
     <footer class="footer bg-light d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="text-center my-0"><a href="${urlDict[lang]["lab"]}" target="_blank" class="px-3">Horinouchi Lab<a href="https://researchmap.jp/ttsukada?lang=${lang}" target="_blank" class="px-3">Researchmap</a><a href="https://orcid.org/0000-0003-2036-308X" target="_blank" class="px-3">ORCID</a><a href="https://github.com/tsukada-cs" target="_blank" class="px-3">GitHub</a></p> 
+                    <p class="text-center my-0"><a href="https://researchmap.jp/ttsukada?lang=${lang}" target="_blank" class="px-3">Researchmap</a><a href="https://orcid.org/0000-0003-2036-308X" target="_blank" class="px-3">ORCID</a><a href="https://github.com/tsukada-cs" target="_blank" class="px-3">GitHub</a></p> 
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-none d-sm-block">
                     <p class="text-center my-0">© 2020 – Taiga Tsukada. Graduate School of Environmental Science, Hokkaido University. / Photo by Reo Tsukada.</p>
+                </div>
+                <div class="col-12 d-sm-none">
+                    <p class="text-center my-0">© 2020 – Taiga Tsukada. / Photo by Reo Tsukada.</p>
                 </div>
             </div>
         </div>
