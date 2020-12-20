@@ -1,7 +1,6 @@
 html {
-  background-color: rgb(248, 249, 250);
+  background-color: #fff;
   position: relative;
-  min-height: 100%;
 }
 
 body, input, select, textarea {
@@ -18,10 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-bottom: 120px;
-  min-height: 100%;
 }
 
-main {
+html, body, main {
   min-height: 100%;
 }
 
