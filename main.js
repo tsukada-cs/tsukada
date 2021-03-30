@@ -1,20 +1,20 @@
-domein = "https://tsukada-cs.github.io/tsukada/"
+domain = "https://tsukada-cs.github.io/tsukada/"
 urlDict = {
     "jp":
         {
-            "Home": domein + "index.html",
-            "About": domein + "about.html",
-            "Research": domein + "research.html",
-            "Publications": domein + "publications.html",
-            "404": domein + "404.html"
+            "Home": domain + "index.html",
+            "About": domain + "about.html",
+            "Research": domain + "research.html",
+            "Publications": domain + "publications.html",
+            "404": domain + "404.html"
         },
     "en":
         {
-            "Home": domein + "index_en.html",
-            "About": domein + "about_en.html",
-            "Research": domein + "research_en.html",
-            "Publications": domein + "publications_en.html",
-            "404": domein + "404.html"
+            "Home": domain + "index_en.html",
+            "About": domain + "about_en.html",
+            "Research": domain + "research_en.html",
+            "Publications": domain + "publications_en.html",
+            "404": domain + "404.html"
         }
 }
 
