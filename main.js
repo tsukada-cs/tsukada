@@ -92,16 +92,16 @@ function footer(lang) {
 }
 
 function preload() {
-    $("<img src='images/covers/cover1.jpg'");
-    $("<img src='images/covers/cover2.jpg'");
-    $("<img src='images/covers/cover3.jpg'");
-    $("<img src='images/covers/cover4.jpg'");
-    $("<img src='images/covers/cover5.jpg'");
-    $("<img src='images/covers/cover6.jpg'");
-    $("<img src='images/covers/cover7.jpg'");
-    $("<img src='images/covers/cover8.jpg'");
-    $("<img src='images/covers/cover9.jpg'");
-    $("<img src='images/covers/cover10.jpg'");
-    $("<img src='images/covers/cover11.jpg'");
-    $("<img src='images/covers/cover12.jpg'");
+    $("<img src='images/covers/cover1.jpg'>");
+    $("<img src='images/covers/cover2.jpg'>");
+    $("<img src='images/covers/cover3.jpg'>");
+    $("<img src='images/covers/cover4.jpg'>");
+    $("<img src='images/covers/cover5.jpg'>");
+    $("<img src='images/covers/cover6.jpg'>");
+    $("<img src='images/covers/cover7.jpg'>");
+    $("<img src='images/covers/cover8.jpg'>");
+    $("<img src='images/covers/cover9.jpg'>");
+    $("<img src='images/covers/cover10.jpg'>");
+    $("<img src='images/covers/cover11.jpg'>");
+    $("<img src='images/covers/cover12.jpg'>");
 }
