@@ -79,10 +79,10 @@ function footer(lang) {
             </div>
             <div class="row">
                 <div class="col-12 d-none d-sm-block">
-                    <p class="text-center my-0">&copy; 2020 – Taiga Tsukada. Graduate School of Environmental Science, Hokkaido University. / Photo by Reo Tsukada.</p>
+                    <p class="text-center my-0">&copy; 2020 Taiga Tsukada / Photo: Reo Tsukada</p>
                 </div>
                 <div class="col-12 d-sm-none">
-                    <p class="text-center my-0">&copy; 2020 – Taiga Tsukada. / Photo by Reo Tsukada.</p>
+                    <p class="text-center my-0">&copy; 2020 Taiga Tsukada / Photo: Reo Tsukada</p>
                 </div>
             </div>
         </div>
