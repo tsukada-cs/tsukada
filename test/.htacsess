@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Enter the Password"
+AuthUserFile https://tsukada-cs.github.io/tsukada/test/.htpasswd
+require valid-user
