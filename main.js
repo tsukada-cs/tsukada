@@ -5,7 +5,7 @@ urlDict = {
             "Home": domain + "index.html",
             "About": domain + "about.html",
             "Research": domain + "research.html",
-            "Publications": domain + "publications.html",
+            "Works": domain + "works.html",
             "404": domain + "404.html"
         },
     "en":
@@ -13,7 +13,7 @@ urlDict = {
             "Home": domain + "index_en.html",
             "About": domain + "about_en.html",
             "Research": domain + "research_en.html",
-            "Publications": domain + "publications_en.html",
+            "Works": domain + "works_en.html",
             "404": domain + "404.html"
         }
 }
@@ -35,7 +35,7 @@ function header(pageName, lang) {
                     <li class="nav-item ${active(pageName, "Home")} ml-2"><a class="nav-link" href="${urlDict[lang]['Home']}">Home</a></li>
                     <li class="nav-item ${active(pageName, "About")} ml-2"><a class="nav-link" href="${urlDict[lang]['About']}">About</a></li>
                     <li class="nav-item ${active(pageName, "Research")} ml-2"><a class="nav-link" href="${urlDict[lang]['Research']}">Research</a></li>
-                    <li class="nav-item ${active(pageName, "Publications")} ml-2"><a class="nav-link" href="${urlDict[lang]['Publications']}">Publications</a></li>
+                    <li class="nav-item ${active(pageName, "Works")} ml-2"><a class="nav-link" href="${urlDict[lang]['Works']}">Works</a></li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item dropdown bg-light">
