@@ -252,7 +252,7 @@ h5 {
 .links .card:hover {
   background: #f3fff6;
   text-decoration: none;
-  border: thin solid #1e4d2b;
+  border: thin solid #88ba86;
 }
 
 .links a {
@@ -261,7 +261,7 @@ h5 {
 
 .links a:hover {
   text-decoration: none;
-  color: #23651C;
+  color: #1e4d2b;
 }
 
 .footer {
