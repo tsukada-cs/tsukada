@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Date Tool</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <style>
     body {
       display: flex;
@@ -18,7 +19,7 @@
     }
 
     #dateInput, #yearInput, #dayOfYearInput {
-      color: #555555; /* 好みの色に変更してください */
+      color: #555555;
     }
 
     .left, .right {
@@ -39,12 +40,14 @@
 </head>
 <body>
   <div class="container">
-    <div class="left">
-      <input type="date" id="dateInput">
-    </div>
-    <div class="right">
-      <input type="text" id="yearInput" placeholder="Year">
-      <input type="text" id="dayOfYearInput" placeholder="Day of Year">
+    <div class="row">
+      <div class="col-12 col-sm-6 border-right">
+        <input type="date" id="dateInput" class="form-control">
+      </div>
+      <div class="col-12 col-sm-6">
+        <input type="text" id="yearInput" class="form-control mb-3" placeholder="Year">
+        <input type="text" id="dayOfYearInput" class="form-control" placeholder="Day of Year">
+      </div>
     </div>
   </div>
 
@@ -105,5 +108,6 @@
     dateInput.value = getCurrentDate();
     updateYearAndDay()
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
