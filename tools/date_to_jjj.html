@@ -46,8 +46,8 @@
 
   <script>
     dateInput.addEventListener('input', updateYearAndDay);
-    yearInput.addEventListener('input', updateDate);
-    dayOfYearInput.addEventListener('input', updateDate);
+    yearInput.addEventListener('keyup', updateDate);
+    dayOfYearInput.addEventListener('keyup', updateDate);
 
     function updateYearAndDay() {
       const date = new Date(dateInput.value);
@@ -81,10 +81,7 @@
     function getDateFromYearAndDay(year, dayOfYear) {
       const date = new Date(year, 0);
       date.setDate(dayOfYear);
-      if (date.getFullYear() === year && date.getDate() === dayOfYear) {
-        return date;
-      }
-      return null;
+      return date;
     }
 
     function formatDate(date) {
