@@ -290,3 +290,6 @@ h5 {
   padding-right: 1em;
 }
 
+.work-list a {
+  word-break: break-all;
+}
