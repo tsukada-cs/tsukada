@@ -69,6 +69,10 @@ h5 {
   height: 1.75em;
 }
 
+.dropdown-item:active {
+  background-color: #e0dbcb;
+}
+
 .flag-image {
   border-radius: 2px;
 }
@@ -285,3 +289,4 @@ h5 {
 .datetime {
   padding-right: 1em;
 }
+
