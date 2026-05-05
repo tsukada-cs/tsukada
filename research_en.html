@@ -1,64 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHEQ3C17WK"></script>
-    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-JHEQ3C17WK');</script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="main.js"></script>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <title>TAIGA TSUKADA | Research</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAIGA TSUKADA | Research</title>
+  <meta name="description" content="Research themes and publications of Taiga Tsukada — tropical cyclone dynamics observed by satellites">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHEQ3C17WK"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JHEQ3C17WK');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <script src="main.js"></script>
 </head>
 <body>
-    <script>header("Research", "en")</script>
-    <main>
-        <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-2" data-slide-to="1"></li>
-                <li data-target="#carousel-example-2" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">  
-                <div class="carousel-item carousel-image-7 active"></div>
-                <div class="carousel-item carousel-image-8"></div>
-                <div class="carousel-item carousel-image-9"></div>
-            </div>
-            <!-- Display for big screen -->
-            <div class="carousel-caption d-none d-sm-block">
-                <h2 class="h2-responsive pt-5 mt-2">Research</h2>
-            </div>
-            <!-- Display for small screen -->
-            <div class="carousel-caption d-sm-none">
-                <h3 class="h3-responsive pt-5 mt-2">Research</h3>
-            </div>
-            <!-- Photo credit -->
-            <span class="carousel-caption photo-credit">&copy; Photo by Reo Tsukada </span>
+<script>header("Research", "en")</script>
 
-            <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-12">
-                    <h4>Research Theme</h4>
-                    Under construction...
-                </div>
+<main>
+  <!-- ── Hero ── -->
+  <section class="page-hero has-bg-img">
+    <div class="hero-bg-slides">
+      <div class="slide active" style="background-image:url('images/covers/cover7.jpg')"></div>
+      <div class="slide" style="background-image:url('images/covers/cover8.jpg')"></div>
+      <div class="slide" style="background-image:url('images/covers/cover9.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content animate-in">
+      <h1 class="hero-page-title">Research</h1>
+    </div>
+    <span class="photo-credit">&copy; Photo by Reo Tsukada</span>
+  </section>
+
+  <!-- ── Publications ── -->
+  <section class="section research-section">
+    <div class="container">
+
+      <div class="research-intro reveal">
+        <h2 class="section-title">Publications</h2>
+        <div class="section-rule"></div>
+        <p>
+          My research focuses on tropical cyclone inner-core structure and dynamics
+          using satellite observations (Himawari, SAR, etc.).
+        </p>
+      </div>
+
+      <div class="research-cards">
+
+        <!-- ════════════════════════════════════
+             2026 — Lightning / Hurricane Dorian
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1029/2025JD046243"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="JGR">
+            <img src="images/research/tsukada2026.png" alt="Hurricane Dorian lightning figure">           
+            <span class="research-card-year">2026</span>
+            <span class="research-card-journal">JGR: Atmospheres</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Lightning Outbreaks at the Mature Stage of Tropical Cyclone: Case Study for Hurricane Dorian (2019)
+            </p>
+            <p class="research-card-authors">
+              <u>Tsukada, T.</u>, J. A. Knaff, S. D. Miller, P. Duran, and J. Martinez
+            </p>
+            <p class="research-card-citation">
+              <i>Journal of Geophysical Research: Atmospheres</i>, 131, e2025JD046243
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
             </div>
-        </div>
-    </main>
-    <script>footer(lang="en")</script>
-    <script>preload()</script>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2026 — SAR / Tropical Cyclone
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1016/j.rse.2025.115139"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="RSE">
+            <img src="images/research/mouche2026.png" alt="SAR Tropical Cyclone figure">
+            <span class="research-card-year">2026</span>
+            <span class="research-card-journal">Remote Sensing of Environment</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Fostering Tropical Cyclone Research and Applications with Synthetic Aperture Radar
+            </p>
+            <p class="research-card-authors">
+              Mouche, A., …, <u>T. Tsukada</u>, et al.
+            </p>
+            <p class="research-card-citation">
+              <i>Remote Sensing of Environment</i>, 333, 115139
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2025 — SAR Mean Winds
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1175/WAF-D-25-0059.1"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="WAF">
+            <img src="images/research/tsukada2025.png" alt="SAR mean winds figure">
+            <span class="research-card-year">2025</span>
+            <span class="research-card-journal">Weather and Forecasting</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Guidance for Estimating Mean Winds in Tropical Cyclones Using SAR-Derived Winds
+            </p>
+            <p class="research-card-authors">
+              <u>Tsukada, T.</u>, J. A. Knaff, U. Shimada, A. Mouche, and S. D. Miller
+            </p>
+            <p class="research-card-citation">
+              <i>Weather and Forecasting</i>, 40, 2699–2716
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2025 — Satellite innovations
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1016/j.jemets.2025.100011"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="JEMS">
+            <img src="images/research/velden2025.jpg" alt="Satellite innovations figure">
+            <span class="research-card-year">2025</span>
+            <span class="research-card-journal">J. European Meteorological Society</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Recent Innovations in Satellite-Based Applications and Their Impacts on Tropical Cyclone Analyses and Forecasts
+            </p>
+            <p class="research-card-authors">
+              Velden, C., J. Knaff, …, <u>T. Tsukada</u>, et al.
+            </p>
+            <p class="research-card-citation">
+              <i>Journal of the European Meteorological Society</i>, 2, 100011
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2024 — AMV Eye Wind
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1029/2023JD040585"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="JGR">
+            <img src="images/research/tsukada2024.jpg" alt="AMV eye wind figure">
+            <span class="research-card-year">2024</span>
+            <span class="research-card-journal">JGR: Atmospheres</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Wind Distribution in the Eye of Tropical Cyclone Revealed by a Novel Atmospheric Motion Vector Derivation
+            </p>
+            <p class="research-card-authors">
+              <u>Tsukada, T.</u>, T. Horinouchi, and S. Tsujino
+            </p>
+            <p class="research-card-citation">
+              <i>Journal of Geophysical Research: Atmospheres</i>, 129, e2023JD040585
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2023 — Eye Radius / RMW
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1175/MWR-D-22-0106.1"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="MWR">
+            <img src="images/research/tsukada2023.png" alt="Eye radius RMW figure">
+            <span class="research-card-year">2023</span>
+            <span class="research-card-journal">Monthly Weather Review</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Strong Relationship between Eye Radius and Radius of Maximum Wind of Tropical Cyclones
+            </p>
+            <p class="research-card-authors">
+              <u>Tsukada, T.</u>, and T. Horinouchi
+            </p>
+            <p class="research-card-citation">
+              <i>Monthly Weather Review</i>, 151(2), 569–588
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2021 — Concentric Eyewall / Trami
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1029/2020JD034434"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="JGR">
+            <img src="images/research/tsujino2021.png" alt="Trami concentric eyewall figure">
+            <span class="research-card-year">2021</span>
+            <span class="research-card-journal">JGR: Atmospheres</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Inner-Core Wind Field in a Concentric Eyewall Replacement of Typhoon Trami (2018)
+            </p>
+            <p class="research-card-authors">
+              Tsujino, S., T. Horinouchi, <u>T. Tsukada</u>, H.-C. Kuo, H. Yamada, and K. Tsuboki
+            </p>
+            <p class="research-card-citation">
+              <i>Journal of Geophysical Research: Atmospheres</i>, 126, e2020JD034434
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ════════════════════════════════════
+             2020 — Himawari-8 Tangential Winds
+             ════════════════════════════════════ -->
+        <a class="research-card reveal"
+           href="https://doi.org/10.1029/2020GL087637"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="GRL">
+            <img src="images/research/tsukada2020.png" alt="Himawari-8 wind figure">
+            <span class="research-card-year">2020</span>
+            <span class="research-card-journal">Geophysical Research Letters</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              Estimation of the Tangential Winds and Asymmetric Structures in Typhoon Inner Core Region Using Himawari-8
+            </p>
+            <p class="research-card-authors">
+              <u>Tsukada, T.</u>, and T. Horinouchi
+            </p>
+            <p class="research-card-citation">
+              <i>Geophysical Research Letters</i>, 47, e2020GL087637
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /.research-cards -->
+    </div>
+  </section>
+</main>
+
+<script>footer("en")</script>
 </body>
 </html>

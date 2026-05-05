@@ -1,112 +1,157 @@
-domain = "https://tsukada-cs.github.io/tsukada/"
-urlDict = {
-    "jp":
-        {
-            "Home": domain + "index.html",
-            "About": domain + "about.html",
-            "Research": domain + "research.html",
-            "Works": domain + "works.html",
-            "404": domain + "404.html"
-        },
-    "en":
-        {
-            "Home": domain + "index_en.html",
-            "About": domain + "about_en.html",
-            "Research": domain + "research_en.html",
-            "Works": domain + "works_en.html",
-            "404": domain + "404.html"
-        }
+/**
+ * TAIGA TSUKADA — Site JavaScript
+ * No jQuery / No Bootstrap — pure vanilla JS
+ */
+
+/* ── Nav Data ───────────────────────────── */
+const NAV = {
+  jp: [
+    { label: "Home",     href: "index.html" },
+    { label: "About",    href: "about.html" },
+    { label: "Research", href: "research.html" },
+    { label: "Works",    href: "works.html" },
+  ],
+  en: [
+    { label: "Home",     href: "index_en.html" },
+    { label: "About",    href: "about_en.html" },
+    { label: "Research", href: "research_en.html" },
+    { label: "Works",    href: "works_en.html" },
+  ],
+};
+
+function getActivePage() {
+  return location.pathname.split("/").pop() || "index.html";
 }
 
-function header(pageName, lang) {
-    function active(pageName, linkName) {
-        if (pageName == linkName) { return "active" };
-    }
-    var html = 
-    `
-    <header>
-        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-            <a href="${urlDict[lang]['Home']}" class="name" style="text-decoration: none;">TAIGA <span class="font-weight-bold">TSUKADA</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ${active(pageName, "Home")} ml-2"><a class="nav-link" href="${urlDict[lang]['Home']}">Home</a></li>
-                    <li class="nav-item ${active(pageName, "About")} ml-2"><a class="nav-link" href="${urlDict[lang]['About']}">About</a></li>
-                    <li class="nav-item ${active(pageName, "Research")} ml-2"><a class="nav-link" href="${urlDict[lang]['Research']}">Research</a></li>
-                    <li class="nav-item ${active(pageName, "Works")} ml-2"><a class="nav-link" href="${urlDict[lang]['Works']}">Works</a></li>
-                </ul>
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item dropdown bg-light">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="${urlDict["jp"][pageName]}">
-                            <img src="images/flags/Japan.png" class="flag-image-japan">
-                            <span class="ml-2">日本語</span>
-                        </a>
-                        <a class="dropdown-item" href="${urlDict["en"][pageName]}">
-                            <img src="images/flags/England.png" class="flag-image">
-                            <span class="ml-2">English</span>
-                        </a>
-                    </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    `
-    document.write(html)
+function buildNav(activePage, lang) {
+  const items        = NAV[lang] || NAV.jp;
+  const otherLang    = lang === "jp" ? "en" : "jp";
+  const otherLabel   = lang === "jp" ? "EN" : "日本語";
+  const currentIdx   = items.findIndex(i => i.href === activePage);
+  const otherItems   = NAV[otherLang];
+  const otherHref    = (currentIdx >= 0 && otherItems[currentIdx])
+    ? otherItems[currentIdx].href : otherItems[0].href;
+
+  const liItems = items.map(item => {
+    const active = item.href === activePage;
+    return `<li><a href="${item.href}"${active ? ' class="active"' : ''}>${item.label}</a></li>`;
+  }).join("\n");
+
+  return `
+<nav class="site-nav" role="navigation" aria-label="メインナビゲーション">
+  <div class="nav-inner">
+    <a class="nav-logo" href="${items[0].href}">TAIGA TSUKADA</a>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      ${liItems}
+      <li class="lang-switcher">
+        <a href="${otherHref}" aria-label="Switch language">${otherLabel}</a>
+      </li>
+    </ul>
+  </div>
+</nav>`;
 }
 
-function footer(lang) {
-    // urlDict = {
-    //     "jp": {
-    //         "lab": "http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.htm",
-    //     },
-    //     "en": {
-    //         "lab": "http://wwwoa.ees.hokudai.ac.jp/people/horinouchi-lab/index.en.htm",
-    //     }
-    // }
-    var currentYear = new Date().getFullYear();
-    var html = 
-    `
-    <footer class="footer bg-light d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="text-center my-0">
-                        <a href="https://orcid.org/0000-0003-2036-308X" target="_blank" class="px-3">ORCID</a>
-                        <a href="https://researchmap.jp/ttsukada?lang=${lang}" target="_blank" class="px-3">Researchmap</a>
-                        <a href="https://github.com/tsukada-cs" target="_blank" class="px-3">GitHub</a>
-                    </p> 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-none d-sm-block">
-                    <p class="text-center my-0">&copy; 2020 – ${currentYear} Taiga Tsukada / Photo: Reo Tsukada</p>
-                </div>
-                <div class="col-12 d-sm-none">
-                    <p class="text-center my-0">&copy; 2020 – ${currentYear} Taiga Tsukada / Photo: Reo Tsukada</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    `
-    document.write(html)
+function buildFooter(lang) {
+  const year = new Date().getFullYear();
+  const copy = lang === "jp"
+    ? `© ${year} Taiga Tsukada`
+    : `© ${year} Taiga Tsukada`;
+  return `
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="https://rammb2.cira.colostate.edu/research/tropical-cyclones/" target="_blank" rel="noopener">Tropical Cyclones Group</a></li>
+      <li><a href="https://www.cira.colostate.edu/" target="_blank" rel="noopener">CIRA</a></li>
+      <li><a href="https://www.colostate.edu/" target="_blank" rel="noopener">CSU</a></li>
+    </ul>
+    <p>${copy}</p>
+  </div>
+</footer>`;
 }
 
-function preload() {
-    $("<img src='images/covers/cover1.jpg'>");
-    $("<img src='images/covers/cover2.jpg'>");
-    $("<img src='images/covers/cover3.jpg'>");
-    $("<img src='images/covers/cover4.jpg'>");
-    $("<img src='images/covers/cover5.jpg'>");
-    $("<img src='images/covers/cover6.jpg'>");
-    $("<img src='images/covers/cover7.jpg'>");
-    $("<img src='images/covers/cover8.jpg'>");
-    $("<img src='images/covers/cover9.jpg'>");
-    $("<img src='images/covers/cover10.jpg'>");
-    $("<img src='images/covers/cover11.jpg'>");
-    $("<img src='images/covers/cover12.jpg'>");
+/* ── Public API ──────────────────────────── */
+function header(pageTitle, lang = "jp") {
+  const activePage = getActivePage();
+  const navHtml    = buildNav(activePage, lang);
+
+  const main = document.querySelector("main");
+  if (main) {
+    main.insertAdjacentHTML("beforebegin", navHtml);
+  } else {
+    document.body.insertAdjacentHTML("afterbegin", navHtml);
+  }
+
+  if (pageTitle) document.title = `TAIGA TSUKADA | ${pageTitle}`;
+
+  // Hamburger toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const links  = document.querySelector(".nav-links");
+  if (toggle && links) {
+    toggle.addEventListener("click", () => {
+      const open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+      document.body.style.overflow = open ? "hidden" : "";
+    });
+    document.addEventListener("click", e => {
+      if (!toggle.contains(e.target) && !links.contains(e.target)) {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
+  // Scroll-blur on nav
+  const nav = document.querySelector(".site-nav");
+  if (nav) {
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 30);
+    }, { passive: true });
+  }
 }
+
+function footer(lang = "jp") {
+  const footerHtml = buildFooter(lang);
+  const main = document.querySelector("main");
+  if (main) {
+    main.insertAdjacentHTML("afterend", footerHtml);
+  } else {
+    document.body.insertAdjacentHTML("beforeend", footerHtml);
+  }
+}
+
+/* ── IntersectionObserver Scroll Reveal ──── */
+function initReveal() {
+  const els = document.querySelectorAll(".reveal");
+  if (!els.length) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(el => io.observe(el));
+}
+
+/* ── CSS-only Hero Crossfade Slideshow ───── */
+function initHeroSlides() {
+  const slides = document.querySelectorAll(".hero-bg-slides .slide");
+  if (slides.length < 2) return;
+  let idx = 0;
+  setInterval(() => {
+    slides[idx].classList.remove("active");
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add("active");
+  }, 5000);
+}
+
+/* ── Init ────────────────────────────────── */
+document.addEventListener("DOMContentLoaded", () => {
+  initReveal();
+  initHeroSlides();
+});

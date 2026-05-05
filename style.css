@@ -17,7 +17,7 @@
   --color-accent:    #1d4e89;
   --color-accent2:   #c0392b;
   --color-hero-bg:   #0d1b2e;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Times New Roman', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
   --radius-sm:   4px;
   --radius-md:   10px;
@@ -31,7 +31,10 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  background: var(--color-hero-bg); /* Mac overscroll fix: top/bottom bounce shows dark navy */
+}
 body {
   font-family: var(--font-body);
   font-size: 16px;
@@ -216,8 +219,8 @@ a:hover { color: var(--color-accent2); text-decoration: underline; }
 }
 .hero-content .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 7vw, 5rem);
-  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 400;
   line-height: 1.08;
   letter-spacing: .01em;
   margin-bottom: 18px;
@@ -334,6 +337,32 @@ a:hover { color: var(--color-accent2); text-decoration: underline; }
 .affiliation-links a { font-size: .9rem; color: var(--color-accent); display: inline-flex; align-items: center; gap: 6px; }
 .affiliation-links a::before { content: '→'; font-size: .8em; opacity: .6; }
 .affiliation-links a:hover { color: var(--color-accent2); text-decoration: none; }
+
+/* Academic profile badges (ORCID / GitHub / Google Scholar) */
+.scholar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.scholar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-size: .82rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: border-color .2s, box-shadow .2s, color .2s, background .2s;
+}
+.scholar-link img { flex-shrink: 0; }
+.scholar-link:hover { text-decoration: none; box-shadow: var(--shadow-sm); }
+.orcid-link:hover  { border-color: #a6ce39; color: #5a8a00; background: #f6ffe0; }
+.github-link:hover { border-color: #333; color: #333; background: #f5f5f5; }
+.gscholar-link:hover { border-color: #4285f4; color: #4285f4; background: #f0f5ff; }
 
 /* NAV CARDS */
 .nav-cards-section { background: var(--color-bg); }
