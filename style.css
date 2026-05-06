@@ -63,6 +63,7 @@ a:hover { color: var(--color-accent2); text-decoration: underline; }
   align-items: center;
   border-bottom: 1px solid rgba(255,255,255,.07);
   transition: background .3s;
+  overflow: visible; /* モバイルメニューが親にクリッピングされないように */
 }
 .site-nav.scrolled { background: rgba(13,27,46,0.98); }
 
@@ -152,25 +153,58 @@ a:hover { color: var(--color-accent2); text-decoration: underline; }
 @media (max-width: 720px) {
   .nav-toggle { display: flex; }
   .nav-links {
-    display: none;
     position: fixed;
-    top: var(--nav-height); left: 0; right: 0; bottom: 0;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    width: 100vw;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     background: rgba(10,20,38,0.98);
-    padding: 20px 0 40px;
+    padding: 12px 0 40px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
   }
-  .nav-links.open { display: flex; animation: mobileNavIn .22s ease both; }
-  @keyframes mobileNavIn {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: none; }
+  .nav-links.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
-  .nav-links a { padding: 16px 28px; border-radius: 0; font-size: .88rem; }
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 18px 32px;
+    border-radius: 0;
+    font-size: .95rem;
+    letter-spacing: .08em;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
   .nav-links a::after { display: none; }
-  .nav-links .lang-switcher { margin: 12px 0 0; padding: 16px 28px; border-left: none; border-top: 1px solid rgba(255,255,255,.08); }
+  .nav-links .lang-switcher {
+    margin: 12px 0 0;
+    padding: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+  .nav-links .lang-switcher a {
+    padding: 18px 32px;
+    font-size: .9rem;
+    border-bottom: none;
+  }
 }
+
+
 
 /* HERO */
 .page-hero {
@@ -295,7 +329,7 @@ a:hover { color: var(--color-accent2); text-decoration: underline; }
   width: 40px; height: 3px;
   background: var(--color-accent2);
   border-radius: 2px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* PROFILE */

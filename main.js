@@ -86,23 +86,27 @@ function header(pageTitle, lang = "jp") {
 
   if (pageTitle) document.title = `TAIGA TSUKADA | ${pageTitle}`;
 
-  // Hamburger toggle
-  const toggle = document.querySelector(".nav-toggle");
-  const links  = document.querySelector(".nav-links");
-  if (toggle && links) {
-    toggle.addEventListener("click", () => {
+  // Hamburger toggle — set up after DOM insertion
+  function initHamburger() {
+    const toggle = document.querySelector(".nav-toggle");
+    const links  = document.querySelector(".nav-links");
+    if (!toggle || !links) return;
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       const open = links.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open);
+      toggle.setAttribute("aria-expanded", String(open));
       document.body.style.overflow = open ? "hidden" : "";
     });
     document.addEventListener("click", e => {
-      if (!toggle.contains(e.target) && !links.contains(e.target)) {
+      if (links.classList.contains("open") &&
+          !toggle.contains(e.target) && !links.contains(e.target)) {
         links.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
         document.body.style.overflow = "";
       }
     });
   }
+  initHamburger();
 
   // Scroll-blur on nav
   const nav = document.querySelector(".site-nav");
