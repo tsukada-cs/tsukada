@@ -17,7 +17,7 @@
   --color-accent:    #1d4e89;
   --color-accent2:   #c0392b;
   --color-hero-bg:   #0d1b2e;
-  --font-display: 'Times New Roman', 'Cormorant Garamond', Georgia, serif;
+  --font-display:  Georgia, 'Cormorant Garamond', serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
   --radius-sm:   4px;
   --radius-md:   10px;
