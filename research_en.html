@@ -33,29 +33,44 @@
     <span class="photo-credit">&copy; Photo by Reo Tsukada</span>
   </section>
 
-  <!-- ── Publications ── -->
-  <section class="section research-section">
+  <!-- ── Overview: motivation → approach ── -->
+  <section class="section research-overview">
     <div class="container">
-
-      <div class="research-intro reveal">
-        <h2 class="section-title">Research Topics</h2>
-        <div class="section-rule"></div>
-        <p>
-          My research focuses on tropical cyclone inner-core structure and dynamics
-          using satellite observations (Himawari, SAR, etc.).
-        </p>
+      <h2 class="section-title reveal">Overview</h2>
+      <div class="section-rule reveal"></div>
+      <div class="research-summary">
+        <div class="summary-block reveal">
+          <p class="eyebrow">Motivation</p>
+          <p class="summary-lead">The inner core that governs a tropical cyclone&rsquo;s intensity remains hard to observe.</p>
+          <p class="summary-text">
+            A storm&rsquo;s intensity, its wind distribution, and their rapid changes are governed by processes in the inner core&mdash;the eye and the eyewall that surrounds it. Yet opportunities to observe this region directly are limited, so estimates of intensity and structure still carry large uncertainties, and the underlying dynamics are not yet fully understood.
+          </p>
+        </div>
+        <div class="summary-block reveal delay-1">
+          <p class="eyebrow">Approach</p>
+          <p class="summary-lead">Making advanced use of satellite observations to diagnose and understand inner-core dynamics and structure.</p>
+          <p class="summary-text">
+            From geostationary satellite imagery, which can capture a storm every few minutes, I have developed methods to measure winds inside the eye by tracking cloud motions and to estimate the radius of maximum wind. I also use synthetic aperture radar (SAR), which maps ocean surface winds at about 1-km resolution, to estimate intensity and wind structure more accurately. I aim to apply these insights both to understanding tropical cyclone dynamics and to improving operational analysis and forecasting.
+          </p>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- ── Publications ──
+       Order: newest year first; within a year, first-author papers → co-authored papers (each newest first) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Publications</h2>
+      <div class="section-rule reveal"></div>
+      <!-- Figures: put the original in images/research/, run python3 tools/optimize_images.py, and reference the generated images/research/web/*.webp -->
       <div class="research-cards">
 
-        <!-- ════════════════════════════════════
-             2026 — Lightning / Hurricane Dorian
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1029/2025JD046243"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="JGR">
-            <img src="images/research/tsukada2026.png" alt="Hurricane Dorian lightning figure">           
+            <img src="images/research/web/tsukada2026.webp" alt="Hurricane Dorian lightning figure" loading="lazy">
             <span class="research-card-year">2026</span>
             <span class="research-card-journal">JGR: Atmospheres</span>
           </div>
@@ -75,14 +90,59 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2026 — SAR / Tropical Cyclone
-             ════════════════════════════════════ -->
+<a class="research-card reveal"
+           href="https://doi.org/10.1175/BAMS-D-25-0144.1"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="BAMS">
+            <img src="images/research/web/avenas+2027.webp" alt="SAR-derived wind speeds along the track of Hurricane Kirk (2024)" loading="lazy">
+            <span class="research-card-year">2026</span>
+            <span class="research-card-journal">Bull. Amer. Meteor. Soc.</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              The Global Kilometric Tropical Cyclone Wind Database (CyclObs) Enabling High-Resolution Data-Driven Studies
+            </p>
+            <p class="research-card-authors">
+              Avenas, A., <u>T. Tsukada</u>, T. Cévaër, J. Knaff, B. Chapron, and A. Mouche
+            </p>
+            <p class="research-card-citation">
+              <i>Bulletin of the American Meteorological Society</i>, in press
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
+<a class="research-card reveal"
+           href="https://doi.org/10.1007/s44394-026-00040-5"
+           target="_blank" rel="noopener">
+          <div class="research-card-fig" data-initials="JMSJ">
+            <img src="images/research/web/shimada+tsukada2026.webp" alt="Radius of maximum wind time series for Typhoon Mawar (2023)" loading="lazy">
+            <span class="research-card-year">2026</span>
+            <span class="research-card-journal">J. Meteor. Soc. Japan</span>
+          </div>
+          <div class="research-card-body">
+            <p class="research-card-title">
+              A Long-Term Dataset of Tropical Cyclone Radius of Maximum Wind in the Western North Pacific Based on a Bayesian Consensus of Multiple Estimates
+            </p>
+            <p class="research-card-authors">
+              Shimada, U., and <u>T. Tsukada</u>
+            </p>
+            <p class="research-card-citation">
+              <i>Journal of the Meteorological Society of Japan</i>, 104, 38
+            </p>
+            <div class="research-card-links">
+              <span class="research-card-link"><i class="fas fa-external-link-alt"></i> DOI</span>
+            </div>
+          </div>
+        </a>
+
         <a class="research-card reveal"
            href="https://doi.org/10.1016/j.rse.2025.115139"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="RSE">
-            <img src="images/research/mouche2026.png" alt="SAR Tropical Cyclone figure">
+            <img src="images/research/web/mouche2026.webp" alt="SAR Tropical Cyclone figure" loading="lazy">
             <span class="research-card-year">2026</span>
             <span class="research-card-journal">Remote Sensing of Environment</span>
           </div>
@@ -102,14 +162,11 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2025 — SAR Mean Winds
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1175/WAF-D-25-0059.1"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="WAF">
-            <img src="images/research/tsukada2025.png" alt="SAR mean winds figure">
+            <img src="images/research/web/tsukada2025.webp" alt="SAR mean winds figure" loading="lazy">
             <span class="research-card-year">2025</span>
             <span class="research-card-journal">Weather and Forecasting</span>
           </div>
@@ -129,14 +186,11 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2025 — Satellite innovations
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1016/j.jemets.2025.100011"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="JEMS">
-            <img src="images/research/velden2025.jpg" alt="Satellite innovations figure">
+            <img src="images/research/web/velden2025.webp" alt="Satellite innovations figure" loading="lazy">
             <span class="research-card-year">2025</span>
             <span class="research-card-journal">J. European Meteorological Society</span>
           </div>
@@ -156,14 +210,11 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2024 — AMV Eye Wind
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1029/2023JD040585"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="JGR">
-            <img src="images/research/tsukada2024.jpg" alt="AMV eye wind figure">
+            <img src="images/research/web/tsukada2024.webp" alt="AMV eye wind figure" loading="lazy">
             <span class="research-card-year">2024</span>
             <span class="research-card-journal">JGR: Atmospheres</span>
           </div>
@@ -183,14 +234,11 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2023 — Eye Radius / RMW
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1175/MWR-D-22-0106.1"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="MWR">
-            <img src="images/research/tsukada2023.png" alt="Eye radius RMW figure">
+            <img src="images/research/web/tsukada2023.webp" alt="Eye radius RMW figure" loading="lazy">
             <span class="research-card-year">2023</span>
             <span class="research-card-journal">Monthly Weather Review</span>
           </div>
@@ -210,14 +258,11 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2021 — Concentric Eyewall / Trami
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1029/2020JD034434"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="JGR">
-            <img src="images/research/tsujino2021.png" alt="Trami concentric eyewall figure">
+            <img src="images/research/web/tsujino2021.webp" alt="Trami concentric eyewall figure" loading="lazy">
             <span class="research-card-year">2021</span>
             <span class="research-card-journal">JGR: Atmospheres</span>
           </div>
@@ -237,14 +282,11 @@
           </div>
         </a>
 
-        <!-- ════════════════════════════════════
-             2020 — Himawari-8 Tangential Winds
-             ════════════════════════════════════ -->
         <a class="research-card reveal"
            href="https://doi.org/10.1029/2020GL087637"
            target="_blank" rel="noopener">
           <div class="research-card-fig" data-initials="GRL">
-            <img src="images/research/tsukada2020.png" alt="Himawari-8 wind figure">
+            <img src="images/research/web/tsukada2020.webp" alt="Himawari-8 wind figure" loading="lazy">
             <span class="research-card-year">2020</span>
             <span class="research-card-journal">Geophysical Research Letters</span>
           </div>
@@ -265,6 +307,14 @@
         </a>
 
       </div><!-- /.research-cards -->
+    </div>
+  </section>
+
+  <!-- ── Link to Works ── -->
+  <section class="research-more">
+    <div class="container reveal">
+      <p>A complete list of publications, presentations, and software is available on the Works page.</p>
+      <a href="works_en.html" class="btn-primary">View Works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
     </div>
   </section>
 </main>
