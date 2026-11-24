@@ -16,7 +16,7 @@
   /* ── Palette: washi paper + deep-sea teal ─────────────── */
   --color-bg:            #f2ede3;  /* page background (washi / kinari)   */
   --color-surface:       #faf7f0;  /* cards (warm white, not pure white) */
-  --color-ink:           #23221f;  /* main text (sumi ink)               */
+  --color-ink:           #3f3932;  /* main text (soft warm sumi ink)     */
   --color-muted:         #59564e;  /* secondary text                     */
   --color-subtle:        #66625a;  /* meta text (keeps >= 4.5:1)         */
   --color-border:        #ded6c6;  /* hairlines                          */
@@ -393,6 +393,7 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   font-size: .9rem;
   color: var(--color-muted);
 }
+.contact-list li:first-child { padding-top: 0; }
 .contact-list li:last-child { border-bottom: none; }
 .contact-list .icon {
   color: var(--color-accent);
@@ -750,13 +751,13 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   }
 }
 
-.research-more {
+.page-more {
   background-color: var(--color-wash);
   border-top: 1px solid var(--color-border);
   padding-block: 64px;
   text-align: center;
 }
-.research-more p { color: var(--color-muted); font-size: .95rem; margin-bottom: 22px; }
+.page-more p { color: var(--color-muted); font-size: .95rem; margin-bottom: 22px; }
 
 /* ── Research cards ─────────────────────── */
 .research-cards {
