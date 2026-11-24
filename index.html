@@ -4,7 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAIGA TSUKADA | Home</title>
-  <meta name="description" content="Tsukada | Home">
+  <meta name="description" content="塚田大河（コロラド州立大学 CIRA）のウェブサイト。台風の研究、論文、経歴を掲載しています。">
+  <!-- Link previews (Open Graph / X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taiga Tsukada">
+  <meta property="og:title" content="塚田大河 Taiga Tsukada">
+  <meta property="og:description" content="塚田大河（コロラド州立大学 CIRA）のウェブサイト。台風の研究、論文、経歴を掲載しています。">
+  <meta property="og:url" content="https://tsukada-cs.github.io/tsukada/">
+  <meta property="og:image" content="https://tsukada-cs.github.io/tsukada/images/og/og-ja.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="塚田大河,台風">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHEQ3C17WK"></script>
@@ -12,9 +23,10 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <script src="main.js"></script>
 </head>
 <body>
@@ -22,11 +34,11 @@
 
 <main>
   <!-- ── Hero ── -->
-  <section class="page-hero has-bg-img">
+  <section class="page-hero page-hero--home has-bg-img">
     <div class="hero-bg-slides">
       <div class="slide active" style="background-image:url('images/covers/cover1.jpg')"></div>
-      <div class="slide" style="background-image:url('images/covers/cover2.jpg')"></div>
-      <div class="slide" style="background-image:url('images/covers/cover3.jpg')"></div>
+      <div class="slide" data-bg="images/covers/cover2.jpg"></div>
+      <div class="slide" data-bg="images/covers/cover3.jpg"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content animate-in">
@@ -34,11 +46,12 @@
       <h1 class="hero-name">Taiga Tsukada</h1>
       <p class="hero-affiliation">コロラド州立大学 大気科学共同研究所</p>
     </div>
+    <a class="hero-scroll" href="#profile" aria-label="下へスクロール"><span></span></a>
     <span class="photo-credit">&copy; Photo by Reo Tsukada</span>
   </section>
 
   <!-- ── Profile ── -->
-  <section class="section profile-section">
+  <section class="section profile-section" id="profile">
     <div class="container">
       <div class="profile-grid">
         <div class="reveal">
@@ -86,24 +99,39 @@
     </div>
   </section>
 
-  <!-- ── Navigation Cards ── -->
+  <!-- ── News（お知らせ）: 新しいものを上に追加 ── -->
+  <section class="section news-section">
+    <div class="container">
+      <h2 class="section-title reveal">お知らせ</h2>
+      <div class="section-rule reveal"></div>
+      <ul class="news-list reveal">
+        <li><time datetime="2026-11">2026.11</time><p>全球の SAR 台風海上風データベース「CyclObs」に関する共著論文が <a href="https://doi.org/10.1175/BAMS-D-25-0144.1" target="_blank" rel="noopener"><i>Bulletin of the American Meteorological Society</i></a> で早期公開されました。</p></li>
+        <li><time datetime="2026-10">2026.10</time><p>北西太平洋の台風の最大風速半径の長期データセットに関する共著論文が <a href="https://doi.org/10.1007/s44394-026-00040-5" target="_blank" rel="noopener"><i>Journal of the Meteorological Society of Japan</i></a> に掲載されました。</p></li>
+        <li><time datetime="2026-05">2026.05</time><p>Hurricane Dorian (2019) の最盛期の雷に関する論文が <a href="https://doi.org/10.1029/2025JD046243" target="_blank" rel="noopener"><i>JGR: Atmospheres</i></a> に掲載されました。</p></li>
+        <li><time datetime="2026-01">2026.01</time><p>コロラド州立大学 大気科学共同研究所の Research Scientist I に着任しました。</p></li>
+        <li><time datetime="2025-11">2025.11</time><p><a href="https://www.metsoc.jp/default/wp-content/uploads/2025/08/2025yamamoto_Tukada.pdf" target="_blank" rel="noopener">日本気象学会 2025年度 山本賞</a>を受賞しました。</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Navigation Cards（各ページの写真を使ったカード） ── -->
   <section class="section nav-cards-section">
     <div class="container">
       <div class="nav-cards">
-        <a href="about.html" class="nav-card reveal">
-          <div class="nav-card-icon"><i class="fas fa-user"></i></div>
+        <a href="about.html" class="nav-card nav-card--photo reveal">
+          <span class="nav-card-img" style="background-image:url('images/covers/web/cover4.webp')"></span>
           <span class="nav-card-label">About</span>
-          <span style="font-size:.85rem;color:var(--color-muted);">経歴等</span>
+          <span class="nav-card-sub">経歴・受賞</span>
         </a>
-        <a href="research.html" class="nav-card reveal delay-1">
-          <div class="nav-card-icon"><i class="fas fa-cloud-bolt"></i></div>
+        <a href="research.html" class="nav-card nav-card--photo reveal delay-1">
+          <span class="nav-card-img" style="background-image:url('images/covers/web/cover7.webp')"></span>
           <span class="nav-card-label">Research</span>
-          <span style="font-size:.85rem;color:var(--color-muted);">研究テーマ</span>
+          <span class="nav-card-sub">研究の概要と論文</span>
         </a>
-        <a href="works.html" class="nav-card reveal delay-2">
-          <div class="nav-card-icon"><i class="fas fa-book-open"></i></div>
+        <a href="works.html" class="nav-card nav-card--photo reveal delay-2">
+          <span class="nav-card-img" style="background-image:url('images/covers/web/cover10.webp')"></span>
           <span class="nav-card-label">Works</span>
-          <span style="font-size:.85rem;color:var(--color-muted);">論文・発表・ソフトウェア</span>
+          <span class="nav-card-sub">論文・発表・ソフトウェア</span>
         </a>
       </div>
     </div>
@@ -124,7 +152,7 @@
           <a href="about.html" class="btn-primary">ABOUT ME →</a>
         </div>
         <div class="reveal delay-1">
-          <img src="images/profile/web/cover_image.webp" width="600" height="338" loading="lazy" class="intro-image" alt="研究イメージ">
+          <img src="images/profile/web/cover_image_origin.webp" width="1200" height="677" loading="lazy" class="intro-image" alt="研究イメージ">
         </div>
       </div>
     </div>

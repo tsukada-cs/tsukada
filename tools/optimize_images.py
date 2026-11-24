@@ -25,7 +25,11 @@ JOBS = [
     ("images/research/*.jpg", 1000, 85),
     ("images/research/*.jpeg", 1000, 85),
     ("images/profile/prof_fc_ice.jpg", 1400, 84),   # profile photo (shown cropped to 4:5)
-    ("images/profile/cover_image.png", 1200, 88),   # intro image on the top page
+    ("images/profile/cover_image.png", 1200, 88),   # intro image on the top page (old, 600 px)
+    ("images/profile/cover_image_origin.png", 1200, 86),   # intro image on the top page (full resolution)
+    ("images/covers/cover4.jpg", 900, 80),          # photo cards on the top page
+    ("images/covers/cover7.jpg", 900, 80),
+    ("images/covers/cover10.jpg", 900, 80),
 ]
 
 SRGB = ImageCms.createProfile("sRGB")

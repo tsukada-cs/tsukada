@@ -4,15 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAIGA TSUKADA | Home</title>
-  <meta name="description" content="Tsukada | Home">
+  <meta name="description" content="Website of Taiga Tsukada (CIRA, Colorado State University): research on tropical cyclones, publications, and career.">
+  <!-- Link previews (Open Graph / X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taiga Tsukada">
+  <meta property="og:title" content="Taiga Tsukada">
+  <meta property="og:description" content="Website of Taiga Tsukada (CIRA, Colorado State University): research on tropical cyclones, publications, and career.">
+  <meta property="og:url" content="https://tsukada-cs.github.io/tsukada/index_en.html">
+  <meta property="og:image" content="https://tsukada-cs.github.io/tsukada/images/og/og-en.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords" content="Taiga Tsukada, Tropical Cyclone, Satellite Meteorology">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JHEQ3C17WK"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JHEQ3C17WK');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <script src="main.js"></script>
 </head>
 <body>
@@ -20,11 +32,11 @@
 
 <main>
   <!-- ── Hero ── -->
-  <section class="page-hero has-bg-img">
+  <section class="page-hero page-hero--home has-bg-img">
     <div class="hero-bg-slides">
       <div class="slide active" style="background-image:url('images/covers/cover1.jpg')"></div>
-      <div class="slide" style="background-image:url('images/covers/cover2.jpg')"></div>
-      <div class="slide" style="background-image:url('images/covers/cover3.jpg')"></div>
+      <div class="slide" data-bg="images/covers/cover2.jpg"></div>
+      <div class="slide" data-bg="images/covers/cover3.jpg"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content animate-in">
@@ -33,11 +45,12 @@
       <p class="hero-affiliation">Cooperative Institute for Research in the Atmosphere</p>
       <p class="hero-affiliation">Colorado State University</p>
     </div>
+    <a class="hero-scroll" href="#profile" aria-label="Scroll down"><span></span></a>
     <span class="photo-credit">&copy; Photo by Reo Tsukada</span>
   </section>
 
   <!-- ── Profile ── -->
-  <section class="section profile-section">
+  <section class="section profile-section" id="profile">
     <div class="container">
       <div class="profile-grid">
         <div class="reveal">
@@ -83,24 +96,39 @@
     </div>
   </section>
 
-  <!-- ── Navigation Cards ── -->
+  <!-- ── News: add new items at the top ── -->
+  <section class="section news-section">
+    <div class="container">
+      <h2 class="section-title reveal">News</h2>
+      <div class="section-rule reveal"></div>
+      <ul class="news-list reveal">
+        <li><time datetime="2026-11">2026.11</time><p>A co-authored paper on CyclObs, a global SAR-based tropical cyclone wind database, was published online in the <a href="https://doi.org/10.1175/BAMS-D-25-0144.1" target="_blank" rel="noopener"><i>Bulletin of the American Meteorological Society</i></a>.</p></li>
+        <li><time datetime="2026-10">2026.10</time><p>A co-authored paper on a long-term radius-of-maximum-wind dataset for the western North Pacific was published in the <a href="https://doi.org/10.1007/s44394-026-00040-5" target="_blank" rel="noopener"><i>Journal of the Meteorological Society of Japan</i></a>.</p></li>
+        <li><time datetime="2026-05">2026.05</time><p>Our paper on lightning outbreaks in the mature stage of Hurricane Dorian (2019) was published in <a href="https://doi.org/10.1029/2025JD046243" target="_blank" rel="noopener"><i>JGR: Atmospheres</i></a>.</p></li>
+        <li><time datetime="2026-01">2026.01</time><p>I started as Research Scientist I at CIRA, Colorado State University.</p></li>
+        <li><time datetime="2025-11">2025.11</time><p>I received the <a href="https://www.metsoc.jp/default/wp-content/uploads/2025/08/2025yamamoto_Tukada.pdf" target="_blank" rel="noopener">2025 Yamamoto Award</a> from the Meteorological Society of Japan.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Navigation Cards (photo cards) ── -->
   <section class="section nav-cards-section">
     <div class="container">
       <div class="nav-cards">
-        <a href="about_en.html" class="nav-card reveal">
-          <div class="nav-card-icon"><i class="fas fa-user"></i></div>
+        <a href="about_en.html" class="nav-card nav-card--photo reveal">
+          <span class="nav-card-img" style="background-image:url('images/covers/web/cover4.webp')"></span>
           <span class="nav-card-label">About</span>
-          <span style="font-size:.85rem;color:var(--color-muted);">Biography</span>
+          <span class="nav-card-sub">Career &amp; Awards</span>
         </a>
-        <a href="research_en.html" class="nav-card reveal delay-1">
-          <div class="nav-card-icon"><i class="fas fa-cloud-bolt"></i></div>
+        <a href="research_en.html" class="nav-card nav-card--photo reveal delay-1">
+          <span class="nav-card-img" style="background-image:url('images/covers/web/cover7.webp')"></span>
           <span class="nav-card-label">Research</span>
-          <span style="font-size:.85rem;color:var(--color-muted);">Research Themes</span>
+          <span class="nav-card-sub">Overview &amp; Publications</span>
         </a>
-        <a href="works_en.html" class="nav-card reveal delay-2">
-          <div class="nav-card-icon"><i class="fas fa-book-open"></i></div>
+        <a href="works_en.html" class="nav-card nav-card--photo reveal delay-2">
+          <span class="nav-card-img" style="background-image:url('images/covers/web/cover10.webp')"></span>
           <span class="nav-card-label">Works</span>
-          <span style="font-size:.85rem;color:var(--color-muted);">Publications &amp; Software</span>
+          <span class="nav-card-sub">Publications, Talks &amp; Software</span>
         </a>
       </div>
     </div>
@@ -121,7 +149,7 @@
           <a href="about_en.html" class="btn-primary">ABOUT ME →</a>
         </div>
         <div class="reveal delay-1">
-          <img src="images/profile/web/cover_image.webp" width="600" height="338" loading="lazy" class="intro-image" alt="Research illustration">
+          <img src="images/profile/web/cover_image_origin.webp" width="1200" height="677" loading="lazy" class="intro-image" alt="Research illustration">
         </div>
       </div>
     </div>
