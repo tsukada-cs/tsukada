@@ -8,9 +8,10 @@
    every other colour is derived from them.
    The washi-paper texture lives in images/texture/ (seamless tiles: kozo fibres,
    paper grain, and crumpled "momigami" shading); adjust or remove it via --texture-paper.
+   Subtle Japanese (和) accents are collected at the end of this file.
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Shippori+Mincho:wght@500;600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
 
 :root {
   /* ── Palette: washi paper + deep-sea teal ─────────────── */
@@ -36,7 +37,7 @@
   --texture-paper: url('images/texture/washi-fibers.svg'), url('images/texture/washi-grain.svg'), url('images/texture/washi-crumple.webp');
 
   /* ── Type & layout ─────────────────────────────────────── */
-  --font-display: Georgia, 'Cormorant Garamond', serif;
+  --font-display: Georgia, 'Cormorant Garamond', 'Shippori Mincho', serif; /* Latin: Georgia, Japanese: Shippori Mincho */
   --font-body:    'DM Sans', system-ui, sans-serif;
   --radius-sm:   4px;
   --radius-md:   10px;
@@ -314,12 +315,14 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   letter-spacing: .03em;
   text-shadow: 0 2px 22px rgba(0,0,0,.35);
 }
-.hero-content::after {
+.hero-content::after {          /* 筆 brush stroke (see 和 section) */
   content: '';
   display: block;
-  width: 40px; height: 2px;
+  width: 88px; height: 10px;
   background: var(--color-highlight-light);
-  margin: 22px auto 0;
+  -webkit-mask: var(--mask-brush) center / 100% 100% no-repeat;
+          mask: var(--mask-brush) center / 100% 100% no-repeat;
+  margin: 20px auto 0;
 }
 
 .photo-credit {
@@ -359,10 +362,12 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   margin-bottom: 14px;
   letter-spacing: .01em;
 }
-.section-rule {
-  width: 36px; height: 2px;
+.section-rule {                 /* 筆 brush stroke (see 和 section) */
+  width: 96px; height: 11px;
   background: var(--color-highlight);
-  margin-bottom: 24px;
+  -webkit-mask: var(--mask-brush) left center / 100% 100% no-repeat;
+          mask: var(--mask-brush) left center / 100% 100% no-repeat;
+  margin-bottom: 22px;
 }
 
 /* PROFILE */
@@ -554,12 +559,13 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   border-bottom: 1px solid var(--color-border);
   display: flex; align-items: center; gap: 12px;
 }
-.history-block h3::before {
+.history-block h3::before {     /* 筆 vertical stroke (see 和 section) */
   content: '';
   display: block;
-  width: 3px; height: 1.1em;
+  width: 9px; height: 1.45em;
   background: var(--color-highlight);
-  border-radius: 2px;
+  -webkit-mask: var(--mask-brush-v) center / 100% 100% no-repeat;
+          mask: var(--mask-brush-v) center / 100% 100% no-repeat;
   flex-shrink: 0;
 }
 .timeline { list-style: none; position: relative; padding-left: 24px; }
@@ -626,10 +632,13 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   border-bottom: 1px solid var(--color-border);
   display: flex; align-items: center; gap: 12px;
 }
-.works-block h3::before {
+.works-block h3::before {       /* 筆 vertical stroke (see 和 section) */
   content: '';
-  display: block; width: 3px; height: 1.1em;
-  background: var(--color-highlight); border-radius: 2px; flex-shrink: 0;
+  display: block; width: 9px; height: 1.45em;
+  background: var(--color-highlight);
+  -webkit-mask: var(--mask-brush-v) center / 100% 100% no-repeat;
+          mask: var(--mask-brush-v) center / 100% 100% no-repeat;
+  flex-shrink: 0;
 }
 .pub-list { list-style: none; display: flex; flex-direction: column; }
 .pub-item {
@@ -918,14 +927,64 @@ a:hover { color: var(--color-accent-strong); text-decoration: underline; text-un
   .research-cards { grid-template-columns: 1fr; }
 }
 
+/* ── 和 (Japanese) accents ─────────────────
+   Kept deliberately quiet: Shippori Mincho for Japanese heading glyphs, a 筆
+   brush stroke under headings (horizontal) and beside the About/Works
+   sub-headings (vertical), kanji under the page titles in the hero, and a
+   faint brush-drawn vortex (筆の渦) watermarked into the first section.
+   The strokes are inline SVGs (data URIs) used as CSS masks, so their colour
+   comes from the palette and they also work when pages are opened locally. */
+:root {
+  --uzu-opacity: .05;          /* 筆の渦 watermark strength (0 = off) */
+  --mask-brush: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%2214%22 viewBox=%220 0 120 14%22%3E%3Cpath d=%22M0.8 3.4L4.9 2.6L8.9 2.6L13.0 2.9L17.1 3.2L21.2 3.3L25.2 3.4L29.3 3.4L33.4 3.4L37.5 3.4L41.5 3.4L45.6 3.4L49.7 3.4L53.8 3.4L57.8 3.5L61.9 3.5L66.0 3.5L70.1 3.5L74.1 3.6L78.2 3.6L82.3 3.7L86.3 3.7L90.4 3.8L94.5 3.8L98.6 3.8L102.6 3.8L106.7 3.7L106.7 3.8L102.6 4.0L98.6 4.1L94.5 4.2L90.4 4.3L86.3 4.3L82.3 4.4L78.2 4.4L74.1 4.4L70.1 4.4L66.0 4.5L61.9 4.5L57.8 4.5L53.8 4.6L49.7 4.6L45.6 4.7L41.5 4.7L37.5 4.7L33.4 4.7L29.3 4.7L25.2 4.7L21.2 4.8L17.1 4.8L13.0 5.0L8.9 5.2L4.9 5.1L0.8 4.2ZM1.2 3.7L4.9 2.9L8.5 2.9L12.2 3.1L15.8 3.4L19.5 3.6L23.1 3.7L26.8 3.8L30.4 3.9L34.1 4.0L37.7 4.1L41.4 4.2L45.0 4.3L48.6 4.4L52.3 4.5L55.9 4.6L59.6 4.6L63.2 4.7L66.9 4.8L70.5 4.8L74.2 4.9L77.8 5.0L81.5 5.0L85.1 5.0L88.8 5.1L92.4 5.1L96.1 5.0L96.1 5.1L92.4 5.3L88.8 5.4L85.1 5.5L81.5 5.5L77.8 5.6L74.2 5.6L70.5 5.6L66.9 5.6L63.2 5.6L59.6 5.6L55.9 5.6L52.3 5.6L48.6 5.5L45.0 5.5L41.4 5.4L37.7 5.4L34.1 5.3L30.4 5.3L26.8 5.2L23.1 5.1L19.5 5.1L15.8 5.2L12.2 5.3L8.5 5.5L4.9 5.4L1.2 4.4ZM1.5 5.6L5.7 4.7L9.9 4.7L14.0 5.0L18.2 5.1L22.4 5.2L26.6 5.2L30.8 5.1L35.0 5.1L39.1 5.1L43.3 5.1L47.5 5.1L51.7 5.0L55.9 5.0L60.1 5.1L64.2 5.1L68.4 5.1L72.6 5.2L76.8 5.2L81.0 5.3L85.2 5.4L89.3 5.4L93.5 5.5L97.7 5.5L101.9 5.5L106.1 5.4L110.3 5.2L110.3 5.3L106.1 5.6L101.9 5.8L97.7 5.9L93.5 6.0L89.3 6.0L85.2 6.0L81.0 6.0L76.8 6.0L72.6 6.1L68.4 6.1L64.2 6.1L60.1 6.1L55.9 6.2L51.7 6.2L47.5 6.3L43.3 6.3L39.1 6.4L35.0 6.4L30.8 6.5L26.6 6.5L22.4 6.6L18.2 6.7L14.0 7.0L9.9 7.2L5.7 7.3L1.5 6.4ZM1.8 5.8L6.2 5.0L10.6 5.1L15.0 5.5L19.4 5.7L23.9 5.8L28.3 5.9L32.7 6.0L37.1 6.0L41.5 6.1L46.0 6.1L50.4 6.1L54.8 6.1L59.2 6.2L63.7 6.2L68.1 6.2L72.5 6.1L76.9 6.1L81.3 6.1L85.8 6.1L90.2 6.1L94.6 6.0L99.0 5.9L103.4 5.7L107.9 5.4L112.3 5.2L116.7 4.9L116.7 5.0L112.3 5.4L107.9 5.8L103.4 6.1L99.0 6.4L94.6 6.6L90.2 6.8L85.8 6.9L81.3 7.0L76.9 7.0L72.5 7.1L68.1 7.2L63.7 7.2L59.2 7.3L54.8 7.3L50.4 7.3L46.0 7.4L41.5 7.4L37.1 7.3L32.7 7.3L28.3 7.3L23.9 7.2L19.4 7.2L15.0 7.3L10.6 7.5L6.2 7.6L1.8 6.6ZM2.4 7.5L6.5 6.6L10.6 6.7L14.7 6.9L18.8 7.1L22.9 7.1L27.0 7.1L31.1 7.1L35.2 7.0L39.4 7.0L43.5 6.9L47.6 6.9L51.7 6.8L55.8 6.8L59.9 6.8L64.0 6.7L68.1 6.7L72.2 6.7L76.4 6.7L80.5 6.7L84.6 6.8L88.7 6.8L92.8 6.8L96.9 6.8L101.0 6.7L105.1 6.6L109.2 6.4L109.2 6.5L105.1 6.8L101.0 7.0L96.9 7.2L92.8 7.3L88.7 7.4L84.6 7.4L80.5 7.5L76.4 7.6L72.2 7.6L68.1 7.7L64.0 7.8L59.9 7.8L55.8 7.9L51.7 8.0L47.6 8.1L43.5 8.2L39.4 8.3L35.2 8.3L31.1 8.4L27.0 8.5L22.9 8.5L18.8 8.6L14.7 8.9L10.6 9.1L6.5 9.2L2.4 8.3ZM2.6 7.6L6.6 6.8L10.6 6.9L14.6 7.2L18.6 7.4L22.6 7.5L26.6 7.6L30.7 7.6L34.7 7.7L38.7 7.7L42.7 7.7L46.7 7.8L50.7 7.8L54.7 7.8L58.7 7.8L62.7 7.9L66.7 7.9L70.7 7.9L74.7 7.8L78.7 7.8L82.7 7.8L86.8 7.8L90.8 7.7L94.8 7.6L98.8 7.5L102.8 7.3L106.8 7.1L106.8 7.2L102.8 7.5L98.8 7.8L94.8 8.1L90.8 8.2L86.8 8.4L82.7 8.5L78.7 8.6L74.7 8.7L70.7 8.8L66.7 8.8L62.7 8.9L58.7 8.9L54.7 9.0L50.7 9.0L46.7 9.0L42.7 9.0L38.7 9.0L34.7 9.0L30.7 9.0L26.6 8.9L22.6 8.9L18.6 9.0L14.6 9.1L10.6 9.3L6.6 9.4L2.6 8.4ZM2.7 8.8L6.6 7.8L10.5 7.9L14.4 8.1L18.3 8.3L22.2 8.3L26.1 8.4L30.0 8.4L33.9 8.4L37.8 8.4L41.6 8.5L45.5 8.5L49.4 8.6L53.3 8.6L57.2 8.7L61.1 8.7L65.0 8.7L68.9 8.8L72.8 8.8L76.7 8.9L80.6 8.9L84.5 8.9L88.4 8.9L92.3 8.9L96.2 8.8L100.1 8.7L103.9 8.5L103.9 8.6L100.1 8.9L96.2 9.1L92.3 9.3L88.4 9.4L84.5 9.5L80.6 9.6L76.7 9.6L72.8 9.7L68.9 9.7L65.0 9.7L61.1 9.7L57.2 9.7L53.3 9.7L49.4 9.7L45.5 9.7L41.6 9.7L37.8 9.7L33.9 9.7L30.0 9.7L26.1 9.7L22.2 9.8L18.3 9.9L14.4 10.1L10.5 10.3L6.6 10.4L2.7 9.6ZM3.1 10.1L7.0 9.2L10.9 9.3L14.8 9.5L18.7 9.6L22.6 9.7L26.5 9.7L30.5 9.6L34.4 9.6L38.3 9.5L42.2 9.5L46.1 9.4L50.0 9.4L53.9 9.3L57.8 9.2L61.7 9.2L65.7 9.1L69.6 9.1L73.5 9.0L77.4 9.0L81.3 8.9L85.2 8.9L89.1 8.9L93.0 8.8L97.0 8.7L100.9 8.6L104.8 8.4L104.8 8.5L100.9 8.8L97.0 9.0L93.0 9.2L89.1 9.4L85.2 9.5L81.3 9.6L77.4 9.7L73.5 9.8L69.6 10.0L65.7 10.1L61.7 10.2L57.8 10.3L53.9 10.4L50.0 10.5L46.1 10.6L42.2 10.7L38.3 10.8L34.4 10.9L30.5 11.0L26.5 11.0L22.6 11.1L18.7 11.2L14.8 11.4L10.9 11.7L7.0 11.8L3.1 10.9Z%22 fill=%22%23000%22/%3E%3C/svg%3E");
+  --mask-brush-v: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2214%22 height=%22120%22 viewBox=%220 0 14 120%22%3E%3Cg transform=%22matrix%280 1 1 0 0 0%29%22%3E%3Cpath d=%22M0.8 3.4L4.9 2.6L8.9 2.6L13.0 2.9L17.1 3.2L21.2 3.3L25.2 3.4L29.3 3.4L33.4 3.4L37.5 3.4L41.5 3.4L45.6 3.4L49.7 3.4L53.8 3.4L57.8 3.5L61.9 3.5L66.0 3.5L70.1 3.5L74.1 3.6L78.2 3.6L82.3 3.7L86.3 3.7L90.4 3.8L94.5 3.8L98.6 3.8L102.6 3.8L106.7 3.7L106.7 3.8L102.6 4.0L98.6 4.1L94.5 4.2L90.4 4.3L86.3 4.3L82.3 4.4L78.2 4.4L74.1 4.4L70.1 4.4L66.0 4.5L61.9 4.5L57.8 4.5L53.8 4.6L49.7 4.6L45.6 4.7L41.5 4.7L37.5 4.7L33.4 4.7L29.3 4.7L25.2 4.7L21.2 4.8L17.1 4.8L13.0 5.0L8.9 5.2L4.9 5.1L0.8 4.2ZM1.2 3.7L4.9 2.9L8.5 2.9L12.2 3.1L15.8 3.4L19.5 3.6L23.1 3.7L26.8 3.8L30.4 3.9L34.1 4.0L37.7 4.1L41.4 4.2L45.0 4.3L48.6 4.4L52.3 4.5L55.9 4.6L59.6 4.6L63.2 4.7L66.9 4.8L70.5 4.8L74.2 4.9L77.8 5.0L81.5 5.0L85.1 5.0L88.8 5.1L92.4 5.1L96.1 5.0L96.1 5.1L92.4 5.3L88.8 5.4L85.1 5.5L81.5 5.5L77.8 5.6L74.2 5.6L70.5 5.6L66.9 5.6L63.2 5.6L59.6 5.6L55.9 5.6L52.3 5.6L48.6 5.5L45.0 5.5L41.4 5.4L37.7 5.4L34.1 5.3L30.4 5.3L26.8 5.2L23.1 5.1L19.5 5.1L15.8 5.2L12.2 5.3L8.5 5.5L4.9 5.4L1.2 4.4ZM1.5 5.6L5.7 4.7L9.9 4.7L14.0 5.0L18.2 5.1L22.4 5.2L26.6 5.2L30.8 5.1L35.0 5.1L39.1 5.1L43.3 5.1L47.5 5.1L51.7 5.0L55.9 5.0L60.1 5.1L64.2 5.1L68.4 5.1L72.6 5.2L76.8 5.2L81.0 5.3L85.2 5.4L89.3 5.4L93.5 5.5L97.7 5.5L101.9 5.5L106.1 5.4L110.3 5.2L110.3 5.3L106.1 5.6L101.9 5.8L97.7 5.9L93.5 6.0L89.3 6.0L85.2 6.0L81.0 6.0L76.8 6.0L72.6 6.1L68.4 6.1L64.2 6.1L60.1 6.1L55.9 6.2L51.7 6.2L47.5 6.3L43.3 6.3L39.1 6.4L35.0 6.4L30.8 6.5L26.6 6.5L22.4 6.6L18.2 6.7L14.0 7.0L9.9 7.2L5.7 7.3L1.5 6.4ZM1.8 5.8L6.2 5.0L10.6 5.1L15.0 5.5L19.4 5.7L23.9 5.8L28.3 5.9L32.7 6.0L37.1 6.0L41.5 6.1L46.0 6.1L50.4 6.1L54.8 6.1L59.2 6.2L63.7 6.2L68.1 6.2L72.5 6.1L76.9 6.1L81.3 6.1L85.8 6.1L90.2 6.1L94.6 6.0L99.0 5.9L103.4 5.7L107.9 5.4L112.3 5.2L116.7 4.9L116.7 5.0L112.3 5.4L107.9 5.8L103.4 6.1L99.0 6.4L94.6 6.6L90.2 6.8L85.8 6.9L81.3 7.0L76.9 7.0L72.5 7.1L68.1 7.2L63.7 7.2L59.2 7.3L54.8 7.3L50.4 7.3L46.0 7.4L41.5 7.4L37.1 7.3L32.7 7.3L28.3 7.3L23.9 7.2L19.4 7.2L15.0 7.3L10.6 7.5L6.2 7.6L1.8 6.6ZM2.4 7.5L6.5 6.6L10.6 6.7L14.7 6.9L18.8 7.1L22.9 7.1L27.0 7.1L31.1 7.1L35.2 7.0L39.4 7.0L43.5 6.9L47.6 6.9L51.7 6.8L55.8 6.8L59.9 6.8L64.0 6.7L68.1 6.7L72.2 6.7L76.4 6.7L80.5 6.7L84.6 6.8L88.7 6.8L92.8 6.8L96.9 6.8L101.0 6.7L105.1 6.6L109.2 6.4L109.2 6.5L105.1 6.8L101.0 7.0L96.9 7.2L92.8 7.3L88.7 7.4L84.6 7.4L80.5 7.5L76.4 7.6L72.2 7.6L68.1 7.7L64.0 7.8L59.9 7.8L55.8 7.9L51.7 8.0L47.6 8.1L43.5 8.2L39.4 8.3L35.2 8.3L31.1 8.4L27.0 8.5L22.9 8.5L18.8 8.6L14.7 8.9L10.6 9.1L6.5 9.2L2.4 8.3ZM2.6 7.6L6.6 6.8L10.6 6.9L14.6 7.2L18.6 7.4L22.6 7.5L26.6 7.6L30.7 7.6L34.7 7.7L38.7 7.7L42.7 7.7L46.7 7.8L50.7 7.8L54.7 7.8L58.7 7.8L62.7 7.9L66.7 7.9L70.7 7.9L74.7 7.8L78.7 7.8L82.7 7.8L86.8 7.8L90.8 7.7L94.8 7.6L98.8 7.5L102.8 7.3L106.8 7.1L106.8 7.2L102.8 7.5L98.8 7.8L94.8 8.1L90.8 8.2L86.8 8.4L82.7 8.5L78.7 8.6L74.7 8.7L70.7 8.8L66.7 8.8L62.7 8.9L58.7 8.9L54.7 9.0L50.7 9.0L46.7 9.0L42.7 9.0L38.7 9.0L34.7 9.0L30.7 9.0L26.6 8.9L22.6 8.9L18.6 9.0L14.6 9.1L10.6 9.3L6.6 9.4L2.6 8.4ZM2.7 8.8L6.6 7.8L10.5 7.9L14.4 8.1L18.3 8.3L22.2 8.3L26.1 8.4L30.0 8.4L33.9 8.4L37.8 8.4L41.6 8.5L45.5 8.5L49.4 8.6L53.3 8.6L57.2 8.7L61.1 8.7L65.0 8.7L68.9 8.8L72.8 8.8L76.7 8.9L80.6 8.9L84.5 8.9L88.4 8.9L92.3 8.9L96.2 8.8L100.1 8.7L103.9 8.5L103.9 8.6L100.1 8.9L96.2 9.1L92.3 9.3L88.4 9.4L84.5 9.5L80.6 9.6L76.7 9.6L72.8 9.7L68.9 9.7L65.0 9.7L61.1 9.7L57.2 9.7L53.3 9.7L49.4 9.7L45.5 9.7L41.6 9.7L37.8 9.7L33.9 9.7L30.0 9.7L26.1 9.7L22.2 9.8L18.3 9.9L14.4 10.1L10.5 10.3L6.6 10.4L2.7 9.6ZM3.1 10.1L7.0 9.2L10.9 9.3L14.8 9.5L18.7 9.6L22.6 9.7L26.5 9.7L30.5 9.6L34.4 9.6L38.3 9.5L42.2 9.5L46.1 9.4L50.0 9.4L53.9 9.3L57.8 9.2L61.7 9.2L65.7 9.1L69.6 9.1L73.5 9.0L77.4 9.0L81.3 8.9L85.2 8.9L89.1 8.9L93.0 8.8L97.0 8.7L100.9 8.6L104.8 8.4L104.8 8.5L100.9 8.8L97.0 9.0L93.0 9.2L89.1 9.4L85.2 9.5L81.3 9.6L77.4 9.7L73.5 9.8L69.6 10.0L65.7 10.1L61.7 10.2L57.8 10.3L53.9 10.4L50.0 10.5L46.1 10.6L42.2 10.7L38.3 10.8L34.4 10.9L30.5 11.0L26.5 11.0L22.6 11.1L18.7 11.2L14.8 11.4L10.9 11.7L7.0 11.8L3.1 10.9Z%22 fill=%22%23000%22/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* kanji under the English page title in the hero (研究 / 経歴 / 業績) */
+.hero-kanji {
+  font-family: var(--font-display);
+  font-size: clamp(.92rem, 1.7vw, 1.08rem);
+  font-weight: 500;
+  letter-spacing: .55em;
+  padding-left: .55em;          /* keeps the spaced characters centred */
+  color: rgba(255,255,255,.86);
+  margin-top: 6px;
+  text-shadow: 0 1px 12px rgba(0,0,0,.4);
+}
+
+/* 筆の渦 (透かし): one brush-drawn spiral, counter-clockwise inward like a
+   northern-hemisphere typhoon, faintly in the top-right of each page's first section */
+:is(.profile-section, .research-overview, .history-section, .works-section) {
+  position: relative;
+  overflow: hidden;
+}
+:is(.profile-section, .research-overview, .history-section, .works-section)::before {
+  content: '';
+  position: absolute;
+  width: 540px; height: 540px;
+  right: -150px; top: -110px;
+  background: url('images/ornament/uzu.svg') center / contain no-repeat;
+  opacity: var(--uzu-opacity);
+  pointer-events: none;
+}
+:is(.profile-section, .research-overview, .history-section, .works-section) > .container {
+  position: relative;
+}
+@media (max-width: 720px) {
+  :is(.profile-section, .research-overview, .history-section, .works-section)::before {
+    width: 320px; height: 320px;
+    right: -110px; top: -70px;
+  }
+}
+
 /* Balanced line breaks for headings (ignored by older browsers) */
 .section-title, .summary-lead, .research-card-title {
   text-wrap: balance;
 }
 /* Japanese: break lines at phrase (文節) boundaries instead of mid-word (Chrome/Edge; others fall back) */
-:lang(ja) :is(.section-title, .summary-lead) {
-  word-break: auto-phrase;
-}
+:lang(ja) .section-title { word-break: auto-phrase; }
+/* Japanese leads: break only at the <wbr> phrase boundaries written in the HTML */
+:lang(ja) .summary-lead { word-break: keep-all; overflow-wrap: anywhere; }
 
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
